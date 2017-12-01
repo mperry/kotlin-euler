@@ -1,4 +1,21 @@
 
+group 'com.github.mperry'
+version '0.1-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.2.0'
+
+    repositories {
+        mavenCentral()
+    }
+
+//    dependencies {
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//        classpath "org.junit.platform:junit-platform-gradle-plugin:1.0.0"
+//    }
+}
+
+
 apply plugin: 'kotlin'
 
 buildscript {
@@ -26,6 +43,13 @@ repositories {
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.7'
+    compile 'org.functionaljava:functionaljava:4.7'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    testCompile 'junit:junit:4.12'
+//    testCompile 'junit:junit:4.12'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.0.0'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+
+
+
 }
