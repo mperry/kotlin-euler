@@ -9,9 +9,11 @@ import fj.data.Stream
  * Find the sum of all the multiples of 3 or 5 below 1000.
  */
 class Problem1 {
-
     fun sumMultiples(first: Int, second: Int, below: Int): Int {
         return Stream.range(1, below.toLong()).filter{(it % first == 0 || it % second == 0)}.sum()
     }
+}
 
+fun main(args : Array<String>) {
+    println("problem1 main")
 }
